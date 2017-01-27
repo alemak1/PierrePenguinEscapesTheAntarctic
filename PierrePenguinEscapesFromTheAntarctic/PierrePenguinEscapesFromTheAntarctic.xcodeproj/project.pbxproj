@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0EAD821E3B7AA3006E21E7 /* ground.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD0EAD811E3B7AA3006E21E7 /* ground.atlas */; };
+		BD0EAD841E3B7AC7006E21E7 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EAD831E3B7AC7006E21E7 /* Ground.swift */; };
 		BDE3D0C91E3B5694008F04DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */; };
 		BDE3D0CB1E3B5694008F04DC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0CA1E3B5694008F04DC /* GameScene.sks */; };
 		BDE3D0CD1E3B5694008F04DC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0CC1E3B5694008F04DC /* Actions.sks */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0EAD811E3B7AA3006E21E7 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = ground.atlas; path = "../../../../../Downloads/assets (2) 2/Environment/ground.atlas"; sourceTree = "<group>"; };
+		BD0EAD831E3B7AC7006E21E7 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		BDE3D0C51E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PierrePenguinEscapesFromTheAntarctic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDE3D0CA1E3B5694008F04DC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -67,10 +71,12 @@
 		BDE3D0C71E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic */ = {
 			isa = PBXGroup;
 			children = (
+				BD0EAD811E3B7AA3006E21E7 /* ground.atlas */,
 				BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */,
 				BDE3D0CA1E3B5694008F04DC /* GameScene.sks */,
 				BDE3D0CC1E3B5694008F04DC /* Actions.sks */,
 				BDE3D0CE1E3B5694008F04DC /* GameScene.swift */,
+				BD0EAD831E3B7AC7006E21E7 /* Ground.swift */,
 				BDE3D0E31E3B5FF1008F04DC /* GameSprite.swift */,
 				BDE3D0D01E3B5694008F04DC /* GameViewController.swift */,
 				BDE3D0D21E3B5694008F04DC /* Main.storyboard */,
@@ -145,6 +151,7 @@
 				BDE3D0D41E3B5694008F04DC /* Main.storyboard in Resources */,
 				BDE3D0CB1E3B5694008F04DC /* GameScene.sks in Resources */,
 				BDE3D0D61E3B5694008F04DC /* Assets.xcassets in Resources */,
+				BD0EAD821E3B7AA3006E21E7 /* ground.atlas in Resources */,
 				BDE3D0D91E3B5694008F04DC /* LaunchScreen.storyboard in Resources */,
 				BDE3D0CD1E3B5694008F04DC /* Actions.sks in Resources */,
 			);
@@ -157,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0EAD841E3B7AC7006E21E7 /* Ground.swift in Sources */,
 				BDE3D0E81E3B64B0008F04DC /* Bee.swift in Sources */,
 				BDE3D0E41E3B5FF1008F04DC /* GameSprite.swift in Sources */,
 				BDE3D0CF1E3B5694008F04DC /* GameScene.swift in Sources */,
@@ -323,6 +331,7 @@
 				BDE3D0DF1E3B5694008F04DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

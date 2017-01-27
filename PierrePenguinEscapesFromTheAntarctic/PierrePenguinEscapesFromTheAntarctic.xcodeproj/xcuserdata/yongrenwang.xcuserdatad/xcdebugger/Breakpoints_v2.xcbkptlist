@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PierrePenguinEscapesFromTheAntarctic/Bee.swift"
+            timestampString = "507208703.579408"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Bee"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PierrePenguinEscapesFromTheAntarctic.Bee.init (texture : Swift.Optional&lt;__ObjC.SKTexture&gt;, color : __ObjC.UIColor, size : __C.CGSize) -&gt; PierrePenguinEscapesFromTheAntarctic.Bee"
+                  moduleName = "PierrePenguinEscapesFromTheAntarctic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yongrenwang/Desktop/iPhoneApps/PierrePenguinEscapesFromAntarctic/PierrePenguinEscapesFromTheAntarctic/PierrePenguinEscapesFromTheAntarctic/Bee.swift"
+                  timestampString = "507208815.70497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PierrePenguinEscapesFromTheAntarctic.Bee.__allocating_init (texture : Swift.Optional&lt;__ObjC.SKTexture&gt;, color : __ObjC.UIColor, size : __C.CGSize) -&gt; PierrePenguinEscapesFromTheAntarctic.Bee"
+                  moduleName = "PierrePenguinEscapesFromTheAntarctic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yongrenwang/Desktop/iPhoneApps/PierrePenguinEscapesFromAntarctic/PierrePenguinEscapesFromTheAntarctic/PierrePenguinEscapesFromTheAntarctic/Bee.swift"
+                  timestampString = "507208815.707342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PierrePenguinEscapesFromTheAntarctic.Bee.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;PierrePenguinEscapesFromTheAntarctic.Bee&gt;"
+                  moduleName = "PierrePenguinEscapesFromTheAntarctic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yongrenwang/Desktop/iPhoneApps/PierrePenguinEscapesFromAntarctic/PierrePenguinEscapesFromTheAntarctic/PierrePenguinEscapesFromTheAntarctic/Bee.swift"
+                  timestampString = "507208815.709878"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PierrePenguinEscapesFromTheAntarctic.Bee.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;PierrePenguinEscapesFromTheAntarctic.Bee&gt;"
+                  moduleName = "PierrePenguinEscapesFromTheAntarctic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yongrenwang/Desktop/iPhoneApps/PierrePenguinEscapesFromAntarctic/PierrePenguinEscapesFromTheAntarctic/PierrePenguinEscapesFromTheAntarctic/Bee.swift"
+                  timestampString = "507208815.71225"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
