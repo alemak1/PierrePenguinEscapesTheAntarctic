@@ -55,6 +55,10 @@ class GameScene: SKScene {
         
     }
     
+    override func didSimulatePhysics() {
+        
+    }
+    
     
     
     override func update(_ currentTime: TimeInterval) {
