@@ -13,7 +13,7 @@ class GameScene: SKScene {
     
 
     let world = SKNode()
-    let bee = SKSpriteNode()
+    let player = Player()
     let ground = Ground()
     
     
@@ -22,7 +22,6 @@ class GameScene: SKScene {
         
     
         self.addChild(world)
-        addTheFlyingBee()
         
         let bee2 = Bee()
         let bee3 = Bee()
@@ -36,41 +35,16 @@ class GameScene: SKScene {
         let groundSize = CGSize(width: self.size.width*3, height: 0)
         ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
         
+        player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
+        
     }
     
     
-    func addTheFlyingBee(){
-        bee.size = CGSize(width: 28, height: 24)
-        bee.position = CGPoint(x: 250, y: 250)
-        world.addChild(bee)
-        
-        let beeAtlas = SKTextureAtlas(named: "bee.atlas")
-        let beeFrames: [SKTexture] = [
-            beeAtlas.textureNamed("bee.png"),
-            beeAtlas.textureNamed("bee_fly.png")
-        ]
-        
-        let flyAction = SKAction.animate(with: beeFrames, timePerFrame: 0.14)
-        let beeAction = SKAction.repeatForever(flyAction)
-        bee.run(beeAction)
-        
-        let pathLeft = SKAction.moveBy(x: -200, y: -10, duration: 2)
-        let pathRight = SKAction.moveBy(x: 200, y: 10, duration: 2)
-        
-        let flipTextureNegative = SKAction.scaleX(to: -1, duration: 0)
-        let flipTexturePositive = SKAction.scaleX(to: 1, duration: 0)
-        let flightOfBee = SKAction.sequence([
-            pathLeft,flipTextureNegative,pathRight,flipTexturePositive
-            ])
-        let neverEndingFlight = SKAction.repeatForever(flightOfBee)
-        bee.run(neverEndingFlight)
 
-        
-    }
     
     override func didSimulatePhysics() {
-        let worldXPos = -(bee.position.x*world.xScale - (self.size.width)/2)
-        let worldYPos = -(bee.position.y*world.yScale - (self.size.height/2))
+        let worldXPos = -(player.position.x*world.xScale - (self.size.width)/2)
+        let worldYPos = -(player.position.y*world.yScale - (self.size.height/2))
         world.position = CGPoint(x: worldXPos, y: worldYPos)
     }
     
