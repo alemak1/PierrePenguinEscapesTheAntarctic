@@ -16,6 +16,7 @@
 		BDE3D0D61E3B5694008F04DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0D51E3B5694008F04DC /* Assets.xcassets */; };
 		BDE3D0D91E3B5694008F04DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0D71E3B5694008F04DC /* LaunchScreen.storyboard */; };
 		BDE3D0E21E3B5C5B008F04DC /* bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0E11E3B5C5B008F04DC /* bee.atlas */; };
+		BDE3D0E41E3B5FF1008F04DC /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3D0E31E3B5FF1008F04DC /* GameSprite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BDE3D0D81E3B5694008F04DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDE3D0DA1E3B5694008F04DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDE3D0E11E3B5C5B008F04DC /* bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = bee.atlas; path = Assets.xcassets/Enemies/bee.atlas; sourceTree = "<group>"; };
+		BDE3D0E31E3B5FF1008F04DC /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				BDE3D0CA1E3B5694008F04DC /* GameScene.sks */,
 				BDE3D0CC1E3B5694008F04DC /* Actions.sks */,
 				BDE3D0CE1E3B5694008F04DC /* GameScene.swift */,
+				BDE3D0E31E3B5FF1008F04DC /* GameSprite.swift */,
 				BDE3D0D01E3B5694008F04DC /* GameViewController.swift */,
 				BDE3D0D21E3B5694008F04DC /* Main.storyboard */,
 				BDE3D0D51E3B5694008F04DC /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE3D0E41E3B5FF1008F04DC /* GameSprite.swift in Sources */,
 				BDE3D0CF1E3B5694008F04DC /* GameScene.swift in Sources */,
 				BDE3D0D11E3B5694008F04DC /* GameViewController.swift in Sources */,
 				BDE3D0C91E3B5694008F04DC /* AppDelegate.swift in Sources */,
