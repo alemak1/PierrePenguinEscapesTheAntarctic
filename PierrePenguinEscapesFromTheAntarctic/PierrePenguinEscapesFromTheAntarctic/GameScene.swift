@@ -56,7 +56,9 @@ class GameScene: SKScene {
     }
     
     override func didSimulatePhysics() {
-        
+        let worldXPos = -(bee.position.x*world.xScale - (self.size.width)/2)
+        let worldYPos = -(bee.position.y*world.yScale - (self.size.height/2))
+        world.position = CGPoint(x: worldXPos, y: worldYPos)
     }
     
     
