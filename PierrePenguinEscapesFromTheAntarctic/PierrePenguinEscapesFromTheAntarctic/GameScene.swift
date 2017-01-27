@@ -12,6 +12,10 @@ import GameplayKit
 class GameScene: SKScene {
     
 
+    let world = SKNode()
+    let bee = SKSpriteNode()
+    
+    
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(colorLiteralRed: 0.4, green: 0.6, blue: 0.95, alpha: 1.0)
         
