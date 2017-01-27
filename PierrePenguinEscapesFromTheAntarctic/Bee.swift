@@ -23,6 +23,8 @@ class Bee: SKSpriteNode, GameSprite{
         self.run(flyAnimation)
         
         self.physicsBody = SKPhysicsBody(circleOfRadius: size.width/2)
+        self.physicsBody?.affectedByGravity = false
+        
     }
     
     func onTap() {
