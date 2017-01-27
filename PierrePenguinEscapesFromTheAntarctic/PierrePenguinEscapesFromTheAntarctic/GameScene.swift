@@ -15,11 +15,22 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(colorLiteralRed: 0.4, green: 0.6, blue: 0.95, alpha: 1.0)
         
-        let bee = SKSpriteNode(imageNamed: "bee.png")
-        bee.size = CGSize(width: 25, height: 24)
+        let bee = SKSpriteNode()
+        bee.size = CGSize(width: 28, height: 24)
         bee.position = CGPoint(x: 250, y: 250)
         self.addChild(bee)
    
+        let beeAtlas = SKTextureAtlas(named: "bee.atlas")
+        let beeFrames: [SKTexture] = [
+            beeAtlas.textureNamed("bee.png"),
+            beeAtlas.textureNamed("bee_fly.png")
+            ]
+        
+        let flyAction = SKAction.animate(with: beeFrames, timePerFrame: 0.14)
+        let beeAction = SKAction.repeatForever(flyAction)
+        bee.run(beeAction)
+        
+        
     }
     
     

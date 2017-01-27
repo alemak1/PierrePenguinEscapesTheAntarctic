@@ -15,6 +15,7 @@
 		BDE3D0D41E3B5694008F04DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0D21E3B5694008F04DC /* Main.storyboard */; };
 		BDE3D0D61E3B5694008F04DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0D51E3B5694008F04DC /* Assets.xcassets */; };
 		BDE3D0D91E3B5694008F04DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0D71E3B5694008F04DC /* LaunchScreen.storyboard */; };
+		BDE3D0E21E3B5C5B008F04DC /* bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0E11E3B5C5B008F04DC /* bee.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BDE3D0D51E3B5694008F04DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDE3D0D81E3B5694008F04DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDE3D0DA1E3B5694008F04DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE3D0E11E3B5C5B008F04DC /* bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = bee.atlas; path = Assets.xcassets/Enemies/bee.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		BDE3D0C71E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic */ = {
 			isa = PBXGroup;
 			children = (
+				BDE3D0E11E3B5C5B008F04DC /* bee.atlas */,
 				BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */,
 				BDE3D0CA1E3B5694008F04DC /* GameScene.sks */,
 				BDE3D0CC1E3B5694008F04DC /* Actions.sks */,
@@ -132,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE3D0E21E3B5C5B008F04DC /* bee.atlas in Resources */,
 				BDE3D0D41E3B5694008F04DC /* Main.storyboard in Resources */,
 				BDE3D0CB1E3B5694008F04DC /* GameScene.sks in Resources */,
 				BDE3D0D61E3B5694008F04DC /* Assets.xcassets in Resources */,
