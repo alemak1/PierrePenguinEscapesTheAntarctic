@@ -14,6 +14,7 @@ class GameScene: SKScene {
 
     let world = SKNode()
     let bee = SKSpriteNode()
+    let ground = Ground()
     
     
     override func didMove(to view: SKView) {
@@ -30,6 +31,10 @@ class GameScene: SKScene {
         bee2.spawn(parentNode: world, position: CGPoint(x: 325, y: 325))
         bee3.spawn(parentNode: world, position: CGPoint(x: 200, y: 325))
         bee4.spawn(parentNode: world, position: CGPoint(x: 50, y: 200))
+        
+        let groundPosition = CGPoint(x: -self.size.width, y: 100)
+        let groundSize = CGSize(width: self.size.width*3, height: 0)
+        ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
         
     }
     
