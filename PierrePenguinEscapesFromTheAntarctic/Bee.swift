@@ -21,6 +21,8 @@ class Bee: SKSpriteNode, GameSprite{
         self.size = size
         self.position = position
         self.run(flyAnimation)
+        
+        self.physicsBody = SKPhysicsBody(circleOfRadius: size.width/2)
     }
     
     func onTap() {

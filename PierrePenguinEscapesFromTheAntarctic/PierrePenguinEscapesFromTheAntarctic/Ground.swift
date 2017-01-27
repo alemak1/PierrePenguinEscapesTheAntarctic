@@ -27,6 +27,9 @@ class Ground: SKSpriteNode, GameSprite{
         
         createChildren()
         
+        let pointTopRight = CGPoint(x: size.width, y: 0)
+        self.physicsBody = SKPhysicsBody(edgeFrom: CGPoint(x: 0, y: 0), to: pointTopRight)
+        
     }
     
     func createChildren(){
