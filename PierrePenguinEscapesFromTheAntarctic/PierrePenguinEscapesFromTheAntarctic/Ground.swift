@@ -48,9 +48,11 @@ class Ground: SKSpriteNode, GameSprite{
             }
         }
         
-        func onTap(){
-            
-        }
+       
+        
+    }
+    
+    func onTap(){
         
     }
 }
