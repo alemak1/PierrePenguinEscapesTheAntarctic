@@ -12,6 +12,8 @@ import GameplayKit
 class GameScene: SKScene {
     
 
+    let encounterManager = EncounterManager()
+    
     let world = SKNode()
     let player = Player()
     let ground = Ground()
@@ -38,6 +40,9 @@ class GameScene: SKScene {
         player.spawn(parentNode: world, position: initialPlayerPosition)
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
+        
+        encounterManager.addEncountersToWorld(self.world)
+        encounterManager.encounters[0].position = CGPoint(x: 300, y: 0)
        
     }
     

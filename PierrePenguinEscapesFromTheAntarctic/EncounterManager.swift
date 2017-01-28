@@ -24,7 +24,7 @@ class EncounterManager{
     //all of the encounter nodes to the world node from our GameScene
     
     
-    func addEncountersToWorld(world: SKNode){
+    func addEncountersToWorld(_ world: SKNode){
         for index in 0 ... encounters.count-1 {
             encounters[index].position = CGPoint(x: -2000, y: index*1000)
             world.addChild(encounters[index])
