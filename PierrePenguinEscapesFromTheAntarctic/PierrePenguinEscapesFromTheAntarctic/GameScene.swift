@@ -45,6 +45,28 @@ class GameScene: SKScene {
         player.spawn(parentNode: world, position: initialPlayerPosition)
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
+        
+        let bat = Bat()
+        bat.spawn(parentNode: world, position: CGPoint(x: 400, y: 200))
+        
+        let blade = Blade()
+        blade.spawn(parentNode: world, position: CGPoint(x: 300, y: 76))
+        
+        let madFly = MadFly()
+        madFly.spawn(parentNode: world, position: CGPoint(x: 50, y: 50))
+        
+        let bronzeCoin = Coin()
+        bronzeCoin.spawn(parentNode: world, position: CGPoint(x: 490, y: 250))
+        
+        let goldCoin = Coin()
+        goldCoin.spawn(parentNode: world, position: CGPoint(x: 460, y: 250))
+        goldCoin.turnToGold()
+        
+        let ghost = Ghost()
+        ghost.spawn(parentNode: world, position: CGPoint(x: 50, y: 300))
+        
+        let star = Star()
+        star.spawn(parentNode: world, position: CGPoint(x: 250, y: 250))
        
     }
     

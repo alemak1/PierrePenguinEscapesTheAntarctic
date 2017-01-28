@@ -97,23 +97,23 @@
 		BDE3D0C71E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic */ = {
 			isa = PBXGroup;
 			children = (
+				BDE3D0E11E3B5C5B008F04DC /* bee.atlas */,
 				BD5274391E3C5F100065CE8B /* enemies.atlas */,
 				BD5274351E3C5CAF0065CE8B /* goods.atlas */,
-				BD0EAD851E3B7F05006E21E7 /* pierre.atlas */,
 				BD0EAD811E3B7AA3006E21E7 /* ground.atlas */,
-				BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */,
-				BDE3D0CA1E3B5694008F04DC /* GameScene.sks */,
+				BD0EAD851E3B7F05006E21E7 /* pierre.atlas */,
+				BDE3D0DA1E3B5694008F04DC /* Info.plist */,
 				BDE3D0CC1E3B5694008F04DC /* Actions.sks */,
+				BDE3D0CA1E3B5694008F04DC /* GameScene.sks */,
+				BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */,
 				BDE3D0CE1E3B5694008F04DC /* GameScene.swift */,
-				BD0EAD871E3B7F12006E21E7 /* Player.swift */,
-				BD0EAD831E3B7AC7006E21E7 /* Ground.swift */,
 				BDE3D0E31E3B5FF1008F04DC /* GameSprite.swift */,
 				BDE3D0D01E3B5694008F04DC /* GameViewController.swift */,
-				BDE3D0D21E3B5694008F04DC /* Main.storyboard */,
+				BD0EAD831E3B7AC7006E21E7 /* Ground.swift */,
+				BD0EAD871E3B7F12006E21E7 /* Player.swift */,
 				BDE3D0D51E3B5694008F04DC /* Assets.xcassets */,
-				BDE3D0E11E3B5C5B008F04DC /* bee.atlas */,
 				BDE3D0D71E3B5694008F04DC /* LaunchScreen.storyboard */,
-				BDE3D0DA1E3B5694008F04DC /* Info.plist */,
+				BDE3D0D21E3B5694008F04DC /* Main.storyboard */,
 			);
 			path = PierrePenguinEscapesFromTheAntarctic;
 			sourceTree = "<group>";
