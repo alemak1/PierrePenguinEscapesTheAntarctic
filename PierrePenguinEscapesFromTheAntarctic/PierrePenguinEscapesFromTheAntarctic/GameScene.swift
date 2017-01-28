@@ -29,14 +29,7 @@ class GameScene: SKScene {
     
         self.addChild(world)
         
-        let bee2 = Bee()
-        let bee3 = Bee()
-        let bee4 = Bee()
-        
-        bee2.spawn(parentNode: world, position: CGPoint(x: 325, y: 325))
-        bee3.spawn(parentNode: world, position: CGPoint(x: 200, y: 325))
-        bee4.spawn(parentNode: world, position: CGPoint(x: 50, y: 200))
-        
+       
         let groundPosition = CGPoint(x: -self.size.width, y: 30)
         let groundSize = CGSize(width: self.size.width*3, height: 0)
         
