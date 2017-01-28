@@ -68,6 +68,7 @@ class GameScene: SKScene {
         world.position =  CGPoint(x: worldXPos, y: worldYPos)
         
         playerProgress = player.position.x - initialPlayerPosition.x
+        ground.checkForReposition(playerProgress: playerProgress)
     
     }
     

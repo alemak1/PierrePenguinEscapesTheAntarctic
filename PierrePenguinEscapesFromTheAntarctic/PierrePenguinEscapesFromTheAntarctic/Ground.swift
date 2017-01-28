@@ -13,6 +13,9 @@ class Ground: SKSpriteNode, GameSprite{
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "ground.atlas")
     var groundTexture: SKTexture?
     
+    var jumpWidth = CGFloat()
+    var jumpCount = CGFloat(1)
+    
     func spawn(parentNode: SKNode, position: CGPoint, size: CGSize) {
         parentNode.addChild(self)
         self.size = size
@@ -49,10 +52,21 @@ class Ground: SKSpriteNode, GameSprite{
                 tileCount += 1
                 
             }
+            
+            jumpWidth = tileSize.width*floor(tileCount/3)
         }
         
        
         
+    }
+    
+    func checkForReposition(playerProgress: CGFloat){
+        let groundJumpPosition = jumpWidth*jumpCount
+        
+        if playerProgress >= groundJumpPosition{
+            self.position.x += jumpWidth
+            jumpCount += 1
+        }
     }
     
     func onTap(){
