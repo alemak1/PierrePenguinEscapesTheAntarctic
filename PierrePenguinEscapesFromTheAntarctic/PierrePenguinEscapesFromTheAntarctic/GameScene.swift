@@ -31,15 +31,15 @@ class GameScene: SKScene {
         bee3.spawn(parentNode: world, position: CGPoint(x: 200, y: 325))
         bee4.spawn(parentNode: world, position: CGPoint(x: 50, y: 200))
         
-        let groundPosition = CGPoint(x: -self.size.width, y: 100)
+        let groundPosition = CGPoint(x: -self.size.width, y: 30)
         let groundSize = CGSize(width: self.size.width*3, height: 0)
+        
         ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
         
         player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
         
-        bee2.physicsBody?.mass = 0.2
-        bee2.physicsBody?.applyImpulse(CGVector(dx: -15, dy: 0))
         
+       
     }
     
     
@@ -55,5 +55,6 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        player.update()
     }
 }

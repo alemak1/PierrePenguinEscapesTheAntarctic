@@ -21,6 +21,13 @@ class Player: SKSpriteNode, GameSprite{
         
         self.run(flyAnimation, withKey: "flyAnimation")
         
+        let bodyTexture = textureAtlas.textureNamed("pierre-flying-3.png")
+        self.physicsBody = SKPhysicsBody(texture: bodyTexture, size: size)
+        
+        self.physicsBody?.linearDamping = 0.9
+        self.physicsBody?.mass = 30
+        self.physicsBody?.allowsRotation = false
+        
     }
     
     func createAnimations(){
@@ -56,6 +63,10 @@ class Player: SKSpriteNode, GameSprite{
     }
     
     func onTap() {
+        
+    }
+    
+    func update(){
         
     }
 }
