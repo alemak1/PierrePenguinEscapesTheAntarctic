@@ -15,6 +15,7 @@
 		BD5274381E3C5CD90065CE8B /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5274371E3C5CD90065CE8B /* Star.swift */; };
 		BD52743A1E3C5F100065CE8B /* enemies.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD5274391E3C5F100065CE8B /* enemies.atlas */; };
 		BD52743C1E3C5F4D0065CE8B /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52743B1E3C5F4D0065CE8B /* MadFly.swift */; };
+		BD52743E1E3C65340065CE8B /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52743D1E3C65340065CE8B /* Bat.swift */; };
 		BDE3D0C91E3B5694008F04DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */; };
 		BDE3D0CB1E3B5694008F04DC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0CA1E3B5694008F04DC /* GameScene.sks */; };
 		BDE3D0CD1E3B5694008F04DC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0CC1E3B5694008F04DC /* Actions.sks */; };
@@ -37,6 +38,7 @@
 		BD5274371E3C5CD90065CE8B /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		BD5274391E3C5F100065CE8B /* enemies.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = enemies.atlas; path = "../../../../../Downloads/assets (2) 2/Enemies/enemies.atlas"; sourceTree = "<group>"; };
 		BD52743B1E3C5F4D0065CE8B /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
+		BD52743D1E3C65340065CE8B /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
 		BDE3D0C51E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PierrePenguinEscapesFromTheAntarctic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDE3D0CA1E3B5694008F04DC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				BD5274371E3C5CD90065CE8B /* Star.swift */,
 				BD52743B1E3C5F4D0065CE8B /* MadFly.swift */,
+				BD52743D1E3C65340065CE8B /* Bat.swift */,
 				BDE3D0E71E3B64B0008F04DC /* Bee.swift */,
 				BDE3D0C71E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic */,
 				BDE3D0C61E3B5694008F04DC /* Products */,
@@ -190,6 +193,7 @@
 				BDE3D0E81E3B64B0008F04DC /* Bee.swift in Sources */,
 				BDE3D0E41E3B5FF1008F04DC /* GameSprite.swift in Sources */,
 				BDE3D0CF1E3B5694008F04DC /* GameScene.swift in Sources */,
+				BD52743E1E3C65340065CE8B /* Bat.swift in Sources */,
 				BDE3D0D11E3B5694008F04DC /* GameViewController.swift in Sources */,
 				BDE3D0C91E3B5694008F04DC /* AppDelegate.swift in Sources */,
 				BD52743C1E3C5F4D0065CE8B /* MadFly.swift in Sources */,
