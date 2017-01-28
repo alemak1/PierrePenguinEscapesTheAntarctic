@@ -38,7 +38,7 @@ class GameScene: SKScene {
         
         player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
         
-        
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
        
     }
     
@@ -62,9 +62,17 @@ class GameScene: SKScene {
             }
             
         }
+        player.startFlapping()
     }
     
     
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.stopFlapping()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.stopFlapping()
+    }
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
