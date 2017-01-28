@@ -51,6 +51,19 @@ class GameScene: SKScene {
         world.position = CGPoint(x: worldXPos, y: worldYPos)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches{
+            let location = touch.location(in: self)
+            let nodesTouched = nodes(at: location)
+            for node in nodesTouched{
+                if let gameSprite = node as? GameSprite{
+                    gameSprite.onTap()
+                }
+            }
+            
+        }
+    }
+    
     
     
     override func update(_ currentTime: TimeInterval) {
