@@ -106,6 +106,7 @@ class Player: SKSpriteNode, GameSprite{
             
         }
         
+        self.physicsBody?.velocity.dx = 200
         
     }
 }
