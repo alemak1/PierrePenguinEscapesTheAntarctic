@@ -16,10 +16,13 @@ class GameScene: SKScene {
     let player = Player()
     let ground = Ground()
     
+    var screenCenterY = CGFloat()
+    
     
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor(colorLiteralRed: 0.4, green: 0.6, blue: 0.95, alpha: 1.0)
         
+        self.screenCenterY = self.size.height/2
     
         self.addChild(world)
         
@@ -46,25 +49,27 @@ class GameScene: SKScene {
 
     
     override func didSimulatePhysics() {
-        let worldXPos = -(player.position.x*world.xScale - (self.size.width)/2)
-        let worldYPos = -(player.position.y*world.yScale - (self.size.height/2))
-        world.position = CGPoint(x: worldXPos, y: worldYPos)
+        
+        var worldYPos: CGFloat = 0
+        
+        if(player.position.y > screenCenterY) {
+            let percentOfMaxHeight = (player.position.y - screenCenterY)/(player.maxHeight - screenCenterY)
+            let scaleSubtraction = (percentOfMaxHeight > 1 ? 1: percentOfMaxHeight)*0.6
+            let newScale = 1 - scaleSubtraction
+            world.yScale = newScale
+            world.xScale = newScale
+            worldYPos = -(player.position.y*world.yScale-self.size.height/2)
+        }
+        
+        let worldXPos = -(player.position.x*world.xScale - (self.size.width)/3)
+        world.position =  CGPoint(x: worldXPos, y: worldYPos)
+        
+    
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches{
-            let location = touch.location(in: self)
-            let nodesTouched = nodes(at: location)
-            for node in nodesTouched{
-                if let gameSprite = node as? GameSprite{
-                    gameSprite.onTap()
-                }
-            }
-            
-        }
         player.startFlapping()
     }
-    
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         player.stopFlapping()
