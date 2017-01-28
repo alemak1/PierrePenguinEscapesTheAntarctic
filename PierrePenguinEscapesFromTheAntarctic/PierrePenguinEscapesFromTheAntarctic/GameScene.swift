@@ -17,6 +17,9 @@ class GameScene: SKScene {
     let ground = Ground()
     
     var screenCenterY = CGFloat()
+    let initialPlayerPosition = CGPoint(x: 150, y: 250)
+    var playerProgress = CGFloat()
+    
     
     
     override func didMove(to view: SKView) {
@@ -39,7 +42,7 @@ class GameScene: SKScene {
         
         ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
         
-        player.spawn(parentNode: world, position: CGPoint(x: 150, y: 250))
+        player.spawn(parentNode: world, position: initialPlayerPosition)
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
        
@@ -64,6 +67,7 @@ class GameScene: SKScene {
         let worldXPos = -(player.position.x*world.xScale - (self.size.width)/3)
         world.position =  CGPoint(x: worldXPos, y: worldYPos)
         
+        playerProgress = player.position.x - initialPlayerPosition.x
     
     }
     
