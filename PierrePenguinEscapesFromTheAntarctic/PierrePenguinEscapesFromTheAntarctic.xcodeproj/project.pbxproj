@@ -13,6 +13,8 @@
 		BD0EAD881E3B7F12006E21E7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EAD871E3B7F12006E21E7 /* Player.swift */; };
 		BD0EBDE61E3CD03D0063B63E /* EncounterBats.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD0EBDE51E3CD03D0063B63E /* EncounterBats.sks */; };
 		BD0EBDE81E3CD22A0063B63E /* EncounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EBDE71E3CD22A0063B63E /* EncounterManager.swift */; };
+		BD1B0AB31E3DC159006681F7 /* EncounterBees.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD1B0AB21E3DC159006681F7 /* EncounterBees.sks */; };
+		BD1B0AB91E3DC26A006681F7 /* EncounterGhosts.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD1B0AB81E3DC26A006681F7 /* EncounterGhosts.sks */; };
 		BD5274361E3C5CAF0065CE8B /* goods.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD5274351E3C5CAF0065CE8B /* goods.atlas */; };
 		BD5274381E3C5CD90065CE8B /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5274371E3C5CD90065CE8B /* Star.swift */; };
 		BD52743A1E3C5F100065CE8B /* enemies.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD5274391E3C5F100065CE8B /* enemies.atlas */; };
@@ -41,6 +43,8 @@
 		BD0EAD871E3B7F12006E21E7 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BD0EBDE51E3CD03D0063B63E /* EncounterBats.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterBats.sks; sourceTree = "<group>"; };
 		BD0EBDE71E3CD22A0063B63E /* EncounterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterManager.swift; sourceTree = "<group>"; };
+		BD1B0AB21E3DC159006681F7 /* EncounterBees.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterBees.sks; sourceTree = "<group>"; };
+		BD1B0AB81E3DC26A006681F7 /* EncounterGhosts.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = EncounterGhosts.sks; path = ../EncounterGhosts.sks; sourceTree = "<group>"; };
 		BD5274351E3C5CAF0065CE8B /* goods.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = goods.atlas; path = "../../../../../Downloads/assets (2) 2/Coins and Powerups/goods.atlas"; sourceTree = "<group>"; };
 		BD5274371E3C5CD90065CE8B /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		BD5274391E3C5F100065CE8B /* enemies.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = enemies.atlas; path = "../../../../../Downloads/assets (2) 2/Enemies/enemies.atlas"; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				BD0EBDE51E3CD03D0063B63E /* EncounterBats.sks */,
+				BD1B0AB21E3DC159006681F7 /* EncounterBees.sks */,
+				BD1B0AB81E3DC26A006681F7 /* EncounterGhosts.sks */,
 			);
 			name = Encounters;
 			sourceTree = "<group>";
@@ -201,7 +207,9 @@
 				BDE3D0D91E3B5694008F04DC /* LaunchScreen.storyboard in Resources */,
 				BD0EAD861E3B7F05006E21E7 /* pierre.atlas in Resources */,
 				BD5274361E3C5CAF0065CE8B /* goods.atlas in Resources */,
+				BD1B0AB31E3DC159006681F7 /* EncounterBees.sks in Resources */,
 				BDE3D0CD1E3B5694008F04DC /* Actions.sks in Resources */,
+				BD1B0AB91E3DC26A006681F7 /* EncounterGhosts.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,16 +13,55 @@ import SpriteKit
 class EncounterManager{
     //Store your encounter file names
     let encounterNames: [String] = [
-        "EncounterBats"
+        "EncounterBats",
+        "EncounterBees",
+        "EncounterGhosts"
     ]
+    
+    var currentEncounterIndex: Int?
+    var previousEncounterIndex: Int?
     
     //Each encounter is an SKNode, store an array
     var encounters: [SKNode] = []
     
     
+    //Save the initial positions of the children of a node
+    
+    func saveSpritePositions(node: SKNode){
+        for sprite in node.children{
+            if let spriteNode = sprite as? SKSpriteNode{
+                let initialPositionValue = NSValue(cgPoint: sprite.position)
+                spriteNode.userData = ["initialPosition":initialPositionValue]
+                
+                //Save the positions for the children of this node
+                saveSpritePositions(node: spriteNode)
+            }
+        }
+    }
+    
+    //Reset all the children nodes to their original position
+    
+    func resetSpritePositions(node: SKNode){
+        for sprite in node.children{
+            if let spriteNode = sprite as? SKSpriteNode{
+                spriteNode.physicsBody?.velocity = CGVector(dx: 0.0, dy: 0.0)
+                spriteNode.physicsBody?.angularVelocity = 0
+                
+                //Reset the rotation of the sprite
+                spriteNode.zRotation = 0
+                
+                if let initialPositionVal = spriteNode.userData?.value(forKey: "initialPosition") as? NSValue{
+                    spriteNode.position = initialPositionVal.cgPointValue
+                    
+                    resetSpritePositions(node: spriteNode)
+                }
+            }
+        }
+    }
+    
     //We will call this addEncountersToWorld function from the GameScene to append
     //all of the encounter nodes to the world node from our GameScene
-    
+
     
     func addEncountersToWorld(_ world: SKNode){
         for index in 0 ... encounters.count-1 {
