@@ -70,6 +70,52 @@ class EncounterManager{
         }
     }
     
+    func placeNextEncounter(currentXPos: CGFloat){
+        //Count the encounters in a random ready type (Uint32)
+        let encounterCount = UInt32(encounters.count)
+        
+        //The game requires three encounters to function so exit this function if there are less than 3
+        
+        if encounterCount < 3 { return }
+        
+        //We need to pick an encounter that is currently not displayed on the screen
+        var nextEncounterIndex: Int?
+        var trulyNew: Bool?
+        
+        while trulyNew == false || trulyNew == nil{
+            //Pick a random encounter to set next
+            nextEncounterIndex = Int(arc4random_uniform(encounterCount))
+            
+            //First, assert that this is a new counter 
+            trulyNew = true
+            
+            
+            //Test if it is instead the current encounter
+            if let currentIndex = currentEncounterIndex{
+                if (nextEncounterIndex == currentIndex){
+                    trulyNew = false
+                }
+            }
+            
+            //Test if it is the directly previous encounter:
+            if let previousIndex = previousEncounterIndex{
+                if (nextEncounterIndex == previousIndex){
+                    trulyNew = false
+                }
+            }
+        }
+        
+        //Keep track of the current encounter
+        previousEncounterIndex = currentEncounterIndex
+        currentEncounterIndex = nextEncounterIndex
+        
+        //Reset the new encounter and position it ahead of the player
+        let encounter = encounters[currentEncounterIndex!]
+        encounter.position = CGPoint(x: currentXPos + 1000, y: 0)
+        resetSpritePositions(node: encounter)
+        
+    }
+    
     
     init(){
         //Loop through each encounter scene
@@ -116,7 +162,7 @@ class EncounterManager{
             
             //Add the populated encounter node to the array
             encounters.append(encounter)
-            
+            saveSpritePositions(node: encounter)
         }
     
     }
