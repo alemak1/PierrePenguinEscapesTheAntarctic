@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A6195C6E8CBF994C70EA543818069CB67B8FB24D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A6195C6E8CBF994C70EA543818069CB67B8FB24D" : 9223372036854775807,
+    "9E65DC655C0CE3D1B4BA1D38FA3D0D39788D5DDC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "58347D54-F5A3-4E9F-9631-E41E27A0BC3F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A6195C6E8CBF994C70EA543818069CB67B8FB24D" : "PierrePenguinEscapesFromAntarctic\/",
+    "9E65DC655C0CE3D1B4BA1D38FA3D0D39788D5DDC" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CharacterIntros",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CharacterIntros\/CharacterIntros.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alemak1\/InteractiveStoryApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E65DC655C0CE3D1B4BA1D38FA3D0D39788D5DDC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alemak1\/PierrePenguinEscapesTheAntarctic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A6195C6E8CBF994C70EA543818069CB67B8FB24D"
+    }
+  ]
+}
