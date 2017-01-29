@@ -11,7 +11,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-
+    var nextEncounterSpawnPosition = CGFloat(150)
+    
     let encounterManager = EncounterManager()
     
     let world = SKNode()
@@ -67,6 +68,11 @@ class GameScene: SKScene {
         
         playerProgress = player.position.x - initialPlayerPosition.x
         ground.checkForReposition(playerProgress: playerProgress)
+        
+        if player.position.x > nextEncounterSpawnPosition{
+            encounterManager.placeNextEncounter(currentXPos: nextEncounterSpawnPosition)
+            nextEncounterSpawnPosition += 1400
+        }
     
     }
     
