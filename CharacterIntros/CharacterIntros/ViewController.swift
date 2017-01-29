@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     let images = [
         #imageLiteral(resourceName: "Icon-76"),
         #imageLiteral(resourceName: "ghost-frown"),
@@ -31,16 +33,28 @@ class ViewController: UIViewController {
     ]
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        scrollView.isPagingEnabled = true
+        setupImageViews()
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
+ 
+    func setupImageViews(){
+        var totalWidth: CGFloat = 0
+        
+        for image in images{
+            let imageView = UIImageView(image: image)
+            imageView.frame = CGRect(origin: CGPoint(x: totalWidth, y: 0), size: scrollView.bounds.size)
+            imageView.contentMode = .scaleToFill
+            scrollView.addSubview(imageView)
+            totalWidth += imageView.bounds.size.width
+        }
+        
+        scrollView.contentSize = CGSize(width: totalWidth,
+                                        height: scrollView.bounds.size.height)
+    }
 
 }
 
