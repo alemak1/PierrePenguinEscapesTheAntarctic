@@ -133,6 +133,39 @@ class Player: SKSpriteNode, GameSprite{
             fadeOutAndIn,
             damageEnd
             ])
+        
+        /* --- Create the death animation --- */
+        let startDie = SKAction.run({
+            //Swith to the death texture with X eyes
+            self.texture = self.textureAtlas.textureNamed("pierre-dead.png")
+            
+            //Suspend the penguin in space
+            self.physicsBody?.affectedByGravity = false
+            
+            //Stop any movement
+            self.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            
+            //Make the penguin pass through everything except the ground
+            self.physicsBody?.collisionBitMask = PhysicsCategory.ground.rawValue
+            
+        })
+        
+        let endDie = SKAction.run({
+            //Turn gravity back on
+            self.physicsBody?.affectedByGravity = true
+        })
+        
+        self.dieAnimation = SKAction.sequence([
+            startDie,
+            //Scale the penguin bigger
+            SKAction.scale(to: 1.3, duration: 0.5),
+            //Use the waitForDuration action to prevent a short pause
+            SKAction.wait(forDuration: 0.5),
+            //Rotate the penguin to his back
+            SKAction.rotate(toAngle: 3, duration: 1.5),
+            SKAction.wait(forDuration: 0.5),
+            endDie
+            ])
     }
     
     func startFlapping(){
