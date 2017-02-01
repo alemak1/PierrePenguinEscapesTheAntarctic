@@ -11,6 +11,7 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    let hud = HUD()
     let powerUpStar = Star()
     
     var coinsCollected = 0
@@ -52,7 +53,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         powerUpStar.spawn(parentNode: world, position: CGPoint(x: -2000, y: -1000))
         self.physicsWorld.contactDelegate = self
         
-       
+       hud.createHudNodes(screenSize: self.size)
+        self.addChild(hud)
+        hud.zPosition = 50
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
