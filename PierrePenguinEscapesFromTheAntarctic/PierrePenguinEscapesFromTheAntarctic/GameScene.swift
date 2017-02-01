@@ -88,7 +88,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.coinsCollected += 1
                     print(self.coinsCollected)
             }
-            case PhysicsCategory.powerup.rawValue:  print("start the power-up")
+            case PhysicsCategory.powerup.rawValue:
+                player.starPower()
+                print("start the power-up")
             default:                                print("Contact with no game logic")
         }
     }
@@ -118,7 +120,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             nextEncounterSpawnPosition += 1400
             
             //Each encounter has a 10% chance to spawn a star
-            let starRoll = Int(arc4random_uniform(10))
+            //let starRoll = Int(arc4random_uniform(10))
+            let starRoll = 0
             if starRoll == 0{
                 if abs(player.position.x - powerUpStar.position.x) > 1200 {
                     //only move the star if it is off the screen
