@@ -13,6 +13,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let powerUpStar = Star()
     
+    var coinsCollected = 0
+    
     var nextEncounterSpawnPosition = CGFloat(150)
     
     let encounterManager = EncounterManager()
@@ -80,7 +82,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                                                     player.takeDamage()
             case PhysicsCategory.enemy.rawValue:    print("Take damage")
                                                     player.takeDamage()
-            case PhysicsCategory.coin.rawValue:     print("Collect a coin")
+            case PhysicsCategory.coin.rawValue:
+                if let coin = otherBody.node as? Coin {
+                    coin.collect()
+                    self.coinsCollected += 1
+                    print(self.coinsCollected)
+            }
             case PhysicsCategory.powerup.rawValue:  print("start the power-up")
             default:                                print("Contact with no game logic")
         }
