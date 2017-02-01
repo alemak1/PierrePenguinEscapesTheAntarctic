@@ -23,6 +23,8 @@
 		BD5274401E3C66710065CE8B /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52743F1E3C66710065CE8B /* Ghost.swift */; };
 		BD5274421E3C682A0065CE8B /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5274411E3C682A0065CE8B /* Blade.swift */; };
 		BD5274441E3C69720065CE8B /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5274431E3C69720065CE8B /* Coin.swift */; };
+		BD95469B1E41F1C500ABA268 /* hud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD95469A1E41F1C500ABA268 /* hud.atlas */; };
+		BD95469D1E41F22200ABA268 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD95469C1E41F22200ABA268 /* HUD.swift */; };
 		BDE3D0C91E3B5694008F04DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */; };
 		BDE3D0CB1E3B5694008F04DC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0CA1E3B5694008F04DC /* GameScene.sks */; };
 		BDE3D0CD1E3B5694008F04DC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE3D0CC1E3B5694008F04DC /* Actions.sks */; };
@@ -53,6 +55,8 @@
 		BD52743F1E3C66710065CE8B /* Ghost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
 		BD5274411E3C682A0065CE8B /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
 		BD5274431E3C69720065CE8B /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		BD95469A1E41F1C500ABA268 /* hud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = hud.atlas; path = "../../../../../Downloads/assets (2)/HUD/hud.atlas"; sourceTree = "<group>"; };
+		BD95469C1E41F22200ABA268 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		BDE3D0C51E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PierrePenguinEscapesFromTheAntarctic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE3D0C81E3B5694008F04DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDE3D0CA1E3B5694008F04DC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		BDE3D0BC1E3B5694008F04DC = {
 			isa = PBXGroup;
 			children = (
+				BD95469C1E41F22200ABA268 /* HUD.swift */,
 				BD0EBDE71E3CD22A0063B63E /* EncounterManager.swift */,
 				BD5274371E3C5CD90065CE8B /* Star.swift */,
 				BD52743B1E3C5F4D0065CE8B /* MadFly.swift */,
@@ -118,6 +123,7 @@
 		BDE3D0C71E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic */ = {
 			isa = PBXGroup;
 			children = (
+				BD95469A1E41F1C500ABA268 /* hud.atlas */,
 				BD0EBDE41E3CCF980063B63E /* Encounters */,
 				BD5274391E3C5F100065CE8B /* enemies.atlas */,
 				BD5274351E3C5CAF0065CE8B /* goods.atlas */,
@@ -208,6 +214,7 @@
 				BD0EAD861E3B7F05006E21E7 /* pierre.atlas in Resources */,
 				BD5274361E3C5CAF0065CE8B /* goods.atlas in Resources */,
 				BD1B0AB31E3DC159006681F7 /* EncounterBees.sks in Resources */,
+				BD95469B1E41F1C500ABA268 /* hud.atlas in Resources */,
 				BDE3D0CD1E3B5694008F04DC /* Actions.sks in Resources */,
 				BD1B0AB91E3DC26A006681F7 /* EncounterGhosts.sks in Resources */,
 			);
@@ -226,6 +233,7 @@
 				BD5274421E3C682A0065CE8B /* Blade.swift in Sources */,
 				BDE3D0E81E3B64B0008F04DC /* Bee.swift in Sources */,
 				BDE3D0E41E3B5FF1008F04DC /* GameSprite.swift in Sources */,
+				BD95469D1E41F22200ABA268 /* HUD.swift in Sources */,
 				BD5274401E3C66710065CE8B /* Ghost.swift in Sources */,
 				BDE3D0CF1E3B5694008F04DC /* GameScene.swift in Sources */,
 				BD52743E1E3C65340065CE8B /* Bat.swift in Sources */,
