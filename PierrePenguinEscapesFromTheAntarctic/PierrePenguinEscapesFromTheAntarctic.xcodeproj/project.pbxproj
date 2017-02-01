@@ -38,9 +38,9 @@
 
 /* Begin PBXFileReference section */
 		BD0EAD811E3B7AA3006E21E7 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = ground.atlas; path = "../../../../../Downloads/assets (2) 2/Environment/ground.atlas"; sourceTree = "<group>"; };
-		BD0EAD831E3B7AC7006E21E7 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		BD0EAD831E3B7AC7006E21E7 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ground.swift; path = PierrePenguinEscapesFromTheAntarctic/Ground.swift; sourceTree = "<group>"; };
 		BD0EAD851E3B7F05006E21E7 /* pierre.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = pierre.atlas; path = "../../../../../Downloads/assets (2)/Pierre/pierre.atlas"; sourceTree = "<group>"; };
-		BD0EAD871E3B7F12006E21E7 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		BD0EAD871E3B7F12006E21E7 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = PierrePenguinEscapesFromTheAntarctic/Player.swift; sourceTree = "<group>"; };
 		BD0EBDE51E3CD03D0063B63E /* EncounterBats.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterBats.sks; sourceTree = "<group>"; };
 		BD0EBDE71E3CD22A0063B63E /* EncounterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterManager.swift; sourceTree = "<group>"; };
 		BD1B0AB21E3DC159006681F7 /* EncounterBees.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterBees.sks; sourceTree = "<group>"; };
@@ -100,6 +100,8 @@
 				BD5274411E3C682A0065CE8B /* Blade.swift */,
 				BD5274431E3C69720065CE8B /* Coin.swift */,
 				BDE3D0E71E3B64B0008F04DC /* Bee.swift */,
+				BD0EAD871E3B7F12006E21E7 /* Player.swift */,
+				BD0EAD831E3B7AC7006E21E7 /* Ground.swift */,
 				BDE3D0C71E3B5694008F04DC /* PierrePenguinEscapesFromTheAntarctic */,
 				BDE3D0C61E3B5694008F04DC /* Products */,
 			);
@@ -125,8 +127,6 @@
 				BDE3D0CA1E3B5694008F04DC /* GameScene.sks */,
 				BDE3D0CC1E3B5694008F04DC /* Actions.sks */,
 				BDE3D0CE1E3B5694008F04DC /* GameScene.swift */,
-				BD0EAD871E3B7F12006E21E7 /* Player.swift */,
-				BD0EAD831E3B7AC7006E21E7 /* Ground.swift */,
 				BDE3D0E31E3B5FF1008F04DC /* GameSprite.swift */,
 				BDE3D0D01E3B5694008F04DC /* GameViewController.swift */,
 				BDE3D0D21E3B5694008F04DC /* Main.storyboard */,

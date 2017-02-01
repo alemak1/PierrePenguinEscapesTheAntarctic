@@ -11,6 +11,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    let powerUpStar = Star()
+    
     var nextEncounterSpawnPosition = CGFloat(150)
     
     let encounterManager = EncounterManager()
@@ -44,6 +46,8 @@ class GameScene: SKScene {
         
         encounterManager.addEncountersToWorld(self.world)
         encounterManager.encounters[0].position = CGPoint(x: 300, y: 0)
+        
+        powerUpStar.spawn(parentNode: world, position: CGPoint(x: -2000, y: -1000))
        
     }
     
@@ -72,6 +76,18 @@ class GameScene: SKScene {
         if player.position.x > nextEncounterSpawnPosition{
             encounterManager.placeNextEncounter(currentXPos: nextEncounterSpawnPosition)
             nextEncounterSpawnPosition += 1400
+            
+            //Each encounter has a 10% chance to spawn a star
+            let starRoll = Int(arc4random_uniform(10))
+            if starRoll == 0{
+                if abs(player.position.x - powerUpStar.position.x) > 1200 {
+                    //only move the star if it is off the screen
+                    let randomYPos = CGFloat(arc4random_uniform(400))
+                    powerUpStar.position = CGPoint(x: nextEncounterSpawnPosition, y: randomYPos)
+                    powerUpStar.physicsBody?.angularVelocity = 0
+                    powerUpStar.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                }
+            }
         }
     
     }
@@ -92,4 +108,15 @@ class GameScene: SKScene {
         // Called before each frame is rendered
         player.update()
     }
+}
+
+
+enum PhysicsCategory: UInt32{
+    case penguin = 1
+    case damagedPenguin = 2
+    case ground = 4
+    case enemy = 8
+    case coin = 16
+    case powerup = 32
+    
 }

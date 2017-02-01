@@ -23,6 +23,9 @@ class Coin: SKSpriteNode, GameSprite{
         self.physicsBody?.affectedByGravity = false
         self.texture = textureAtlas.textureNamed("coin-bronze.png")
         
+        self.physicsBody?.categoryBitMask = PhysicsCategory.coin.rawValue
+        self.physicsBody?.collisionBitMask = 0
+        
         
     }
     

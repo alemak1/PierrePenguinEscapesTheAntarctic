@@ -24,6 +24,8 @@ class Bat: SKSpriteNode, GameSprite{
         self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
         self.physicsBody?.affectedByGravity = false
     
+        self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
+        self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
     }
     
     func onTap() {

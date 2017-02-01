@@ -26,6 +26,11 @@ class Ghost: SKSpriteNode, GameSprite{
         self.alpha = 0.8
         
         
+        self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
+        self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
+
+        
+        
     }
     
     func onTap() {
