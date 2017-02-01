@@ -24,7 +24,7 @@ class Player: SKSpriteNode, GameSprite{
     
     //We want to stop forward velocity if the player dies, so forward velocity is stored as a property
     
-    var forwardVelocity: CGFloat = 200
+    var forwardVelocity: CGFloat = 100
     
     
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "pierre.atlas")
