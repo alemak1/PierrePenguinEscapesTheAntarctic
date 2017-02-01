@@ -69,8 +69,9 @@ class HUD: SKNode{
         coinCountText.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         
         //Add the textLabel and the coin icon to the HUD
-        self.addChild(coinCountText)
         self.addChild(coinIcon)
+        self.addChild(coinCountText)
+
         
         //Create three heartnodes for the life meter
         
