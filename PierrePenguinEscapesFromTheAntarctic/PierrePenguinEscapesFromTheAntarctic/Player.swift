@@ -9,6 +9,24 @@
 import SpriteKit
 
 class Player: SKSpriteNode, GameSprite{
+    //The player will be able to take 3 hits before game over
+    var health: Int = 3
+    
+    //Keep track of when the player is invulnerable
+    var invulnerable: Bool = false
+    
+    //Keep track of when the player is newly damaged
+    var damaged: Bool = false
+    
+    //Animations will be created to run when the player either takes damage or dies
+    var damageAnimation = SKAction()
+    var dieAnimation = SKAction()
+    
+    //We want to stop forward velocity if the player dies, so forward velocity is stored as a property
+    
+    var forwardVelocity: CGFloat = 200
+    
+    
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "pierre.atlas")
     var flyAnimation = SKAction()
     var soarAnimation = SKAction()
@@ -72,6 +90,9 @@ class Player: SKSpriteNode, GameSprite{
     }
     
     func startFlapping(){
+        
+        if (health <= 0) { return }
+        
         self.removeAction(forKey: "soarAnimation")
         self.run(flyAnimation, withKey: "flyAnimation")
         self.flapping = true
@@ -79,9 +100,47 @@ class Player: SKSpriteNode, GameSprite{
     
     
     func stopFlapping(){
+        
+        if (health <= 0) { return }
         self.removeAction(forKey: "flapAnimation")
         self.run(soarAnimation, withKey: "soarAnimation")
         self.flapping = false
+    }
+    
+    
+    func die(){
+        //Make sure the player is fully visible
+        self.alpha = 1
+        
+        //Remove all animations
+        self.removeAllActions()
+        
+        //Run the die animation
+        self.run(self.dieAnimation)
+        
+        //Prevent any further upward movement
+        self.flapping = false
+        
+        //Stop forward movement
+        self.forwardVelocity = 0
+        
+        
+    }
+    
+    func takeDamage(){
+        //If invulnerable or damaged, return:
+        if self.invulnerable || self.damaged { return }
+        
+        //Remove one from our health pool
+        self.health -= 1
+        
+        if self.health == 0 {
+            //If we are out of health, run the die function
+            self.die()
+        } else {
+            //Runt the take damage animation
+            self.run(self.damageAnimation)
+        }
     }
     
     func onTap() {
@@ -109,7 +168,7 @@ class Player: SKSpriteNode, GameSprite{
             
         }
         
-        self.physicsBody?.velocity.dx = 50
+        self.physicsBody?.velocity.dx = self.forwardVelocity
         
     }
 }
