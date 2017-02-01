@@ -81,15 +81,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Find the type of contact
         switch otherBody.categoryBitMask{
-            case PhysicsCategory.ground.rawValue:   print("Hit the ground")
-                                                    player.takeDamage()
-            case PhysicsCategory.enemy.rawValue:    print("Take damage")
-                                                    player.takeDamage()
+            case PhysicsCategory.ground.rawValue:
+                print("Hit the ground")
+                player.takeDamage()
+                hud.setHealthDisplay(newHealth: player.health)
+            
+            case PhysicsCategory.enemy.rawValue:
+                print("Take damage")
+                player.takeDamage()
+                hud.setHealthDisplay(newHealth: player.health)
             case PhysicsCategory.coin.rawValue:
                 if let coin = otherBody.node as? Coin {
                     coin.collect()
                     self.coinsCollected += 1
                     print(self.coinsCollected)
+                    hud.setCoinCountDisplay(newCoinCount: self.coinsCollected)
             }
             case PhysicsCategory.powerup.rawValue:
                 player.starPower()
